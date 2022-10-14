@@ -26,28 +26,30 @@ public class YourLifeInMovies {
     
     userYearOfBirth = myScanner.nextInt();
     
-    if (1965 > userYearOfBirth > 1975) {
-          System.out.println("MASH TV series has been around for almost half a century!");
-      } else if (userYearOfBirth < 1975 || userYearOfBirth > 1985 ) {
-          System.out.println("Original Jurassic Park release is closer to the first lunar landing than it is to today.");
-       } else if (userYearOfBirth < 1985 || userYearOfBirth > 1980) {
-         System.out.println("Space Jam came out not last decade, but the one before THAT."); 
-         
-         if (userYearOfBirth == 1980) {
-         
-         System.out.println("Pixar's 'Up' came out over a decade ago.");
-         
-         System.out.println("The first Harry Potter came out over 15 years ago.");
-         
-         System.out.println("Space Jam came out not last decade, but the one before THAT.");
-         } }
-     else if (userYearOfBirth < 2005 || userYearOfBirth > 1995 ) {
-         System.out.println("Pixar's 'Up' came out over a decade ago.");
-      } else if (userYearOfBirth < 1995 || userYearOfBirth > 1985 ) {
-         System.out.println("The first Harry Potter came out over 15 years ago.");   
-         
-         
+    if (userYearOfBirth < 2005) {
+        System.out.println("Pixar's 'Up' came out over a decade ago");
+    } 
+    if (userYearOfBirth < 1995) {
+        System.out.println("First Harry Potter came out over 15 years ago");
+    }
+    if (userYearOfBirth  < 1985) {
+        System.out.println("Space Jam came out not last decade, but the one before THAT");
+    }
+    if (userYearOfBirth < 1975) {
+        System.out.println("The original Jurassic Park release is closer to the first lunar landing than it is to today.");
+    }
+    if (userYearOfBirth < 1965) {
+        System.out.println("MASH TV series has been around for almost half a century!");
+    } if (userYearOfBirth == 1980) {
+        System.out.println("""
+                           Did you know that Pixar's 'Up' came out over a decade ago?
+                           And that the first Harry Potter came out over 15 years ago!
+                           Also, Space Jam came out not last decade, but the one before THAT.""");
+    }
+
+    
     }
     
-    
-    }}
+    }
+
+
