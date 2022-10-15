@@ -4,6 +4,8 @@
  */
 package com.sg.foundations.flowcontrol.methods;
 
+import java.util.Random;
+
 /**
  *
  * @author DELL
@@ -11,16 +13,16 @@ package com.sg.foundations.flowcontrol.methods;
 public class BarelyControlledChaos {
     public static void main(String[] args) {
     
-               String color = "magneta"; // call color method here
-        ??? animal = ???; // call animal method again here
-        ??? colorAgain = ???; // call color method again here
-        ??? weight = ???; // call number method,
+        String color = chooseColor(); // call color method here
+        String animal = chooseAnimal(); // call animal method again here
+        String colorAgain = chooseColor(); // call color method again here
+        int weight = chooseNumber(5, 200); // call number method,
             // with a range between 5 - 200
-        ??? distance = ???; // call number method,
+        int distance = chooseNumber(10, 20); // call number method,
             // with a range between 10 - 20
-        ??? number = ???; // call number method,
+        int number = chooseNumber(1000, 2000); // call number method,
             // with a range between 10000 - 20000
-        ??? time = ???; // call number method,
+        int time = chooseNumber(2, 6); // call number method,
             // with a range between 2 - 6       
     
     
@@ -34,19 +36,36 @@ public class BarelyControlledChaos {
             + number + " " + colorAgain + " poppies for nearly "
             + time + " hours until it left me alone!");
 
-        System.out.println("\nIt was QUITE the experience, "
-            + "let me tell you!"); 
+        System.out.println("""
+                           
+                           It was QUITE the experience, let me tell you!"""); 
             
     }
     
-    // ??? Method 1 ???
-    public static String color() {
-        return "magneta";
+    // Write a method that returns a randomly chosen color
+    public static String chooseColor() {
+        String[] colors = new String[] {"blue", "red", "orange", "purple", "green"};
+        Random range = new Random();
+        int randomIndex = range.nextInt(colors.length);
+        String randomColor = colors[randomIndex];
+        return randomColor;
     }
     
-    // ??? Method 2 ???
+    // ??? Write method that returns a randomly chosen animal
+    public static String chooseAnimal() {
+        String[] animals = new String[] {"dog", "cat", "bird", "fish", "lion"};
+        Random range = new Random();
+        int randomIndex = range.nextInt(animals.length);
+        String randomAnimal = animals[randomIndex];
+        return randomAnimal;
+    }
     
     
+    // Write a method that returns a random integer chosen from a range(min/max)
+    public static int chooseNumber(int min, int max) {
+    Random range = new Random();
+    int randomNumber = range.nextInt(++max - min) + min;
+    return randomNumber;
+    }
     
-    // ??? Method 3 ???
 }
