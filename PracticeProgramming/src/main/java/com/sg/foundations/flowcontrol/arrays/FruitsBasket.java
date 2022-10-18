@@ -29,21 +29,13 @@ public class FruitsBasket {
      // Fruit counting code goes here!
      
      for (int i = 0; i < fruitBasket.length; i++) {
-        if (fruitBasket[i] == "Orange") {
-            numOranges++;
+        if (fruitBasket[i].equals("Orange")) {
+            numOranges +=1;
+        } else if (fruitBasket[i].equals("Apple")) {
+                numApples += 1;
+        } else {
+            numOtherFruit += 1;
         }
-     }
-    
-     for (int j = 0; j < fruitBasket.length; j++) {
-         if (fruitBasket[j] == "Apple") {
-             numApples++;
-         }
-     }
-     
-     for (int k = 0; k < fruitBasket.length; k++) {
-            if (fruitBasket[k] != "Orange" && fruitBasket[k] != "Apple") {
-                numOtherFruit++;
-            }
      }
             
             //print the results
@@ -55,6 +47,7 @@ public class FruitsBasket {
             
         }
      }
+
      
 
 

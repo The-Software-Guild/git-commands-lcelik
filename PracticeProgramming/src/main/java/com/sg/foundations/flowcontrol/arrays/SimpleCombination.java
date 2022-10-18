@@ -17,9 +17,19 @@ public class SimpleCombination {
 
         // Combining code should go here!
         
-      
+      // For loop to store the elements of first array in the new array
+        for (int i = 0; i < firstHalf.length; i++) {
+            wholeNumbers[i] = firstHalf[i];
+        }
+        // For loop to store the elements of second array in the new array
+        for (int i = 0; i < secondHalf.length; i++) {
+            wholeNumbers[firstHalf.length + i] = secondHalf[i];
+        }
 
         // Printing code should go here
+         for (int i = 0; i < wholeNumbers.length; i++) {
+            System.out.print(wholeNumbers[i] + " ");
+        }
 
     }
 }
